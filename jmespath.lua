@@ -1284,9 +1284,7 @@ return {
   -- @return function Returns a JMESPath expression evaluator
   runtime = function(config)
     if not config then return default_runtime end
-    if config.fn_dispatcher then
-      local interpreter = Interpreter.new{config}
-    end
+    local interpreter = Interpreter.new(config)
     if config.cache == false then
       return function (expression, data)
         return interpreter:visit(parser:parse(expression), data)
