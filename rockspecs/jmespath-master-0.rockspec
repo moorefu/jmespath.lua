@@ -20,6 +20,6 @@ dependencies = {
 build = {
    type = 'builtin',
    modules = {
-      ["jmespath"] = "lib/jmespath.lua"
+      ["jmespath"] = "jmespath.lua/lib/jmespath.lua"
    }
 }
